@@ -1,0 +1,35 @@
+ADI Element Selector lets you tell an AI agent exactly which part of a page you mean.
+
+Open it on any site, write what you want changed, and point at elements as you go. Each one lands in your message as a numbered chip. Press Copy and paste the result into your ADI agent's chat — or anywhere else you can paste text. The message carries a path to every element you picked, so the agent can find it in the code instead of guessing from a description.
+
+HOW IT WORKS
+
+• Click the toolbar button, or press Alt+Shift+E, to open the composer on the current page.
+• Click "Select element", then click anything on the page. The up and down arrow keys step out to the parent element or back in, which is how you pick "this container" rather than what is inside it.
+• Keep writing and keep pointing. Hover a chip to see which element it stands for; click it to scroll that element into view.
+• Press Copy and paste the message into your agent's chat.
+
+WHAT GETS COPIED
+
+Your message as you wrote it, with [1], [2] and so on where the elements are, followed by the page's address and, for each element:
+• a CSS selector that matches exactly that element — built from ids, test ids and component class names wherever the page has them;
+• its opening HTML tag with its attributes;
+• the text it shows;
+• its size and position on screen.
+
+It is plain Markdown, so it reads the same in a chat that renders it and in a terminal that does not.
+
+BUILT TO STAY OUT OF THE WAY
+
+• It runs only when you press its button, and only on the tab where you pressed it. It asks for no access to your sites in advance.
+• Pointing never clicks. Links are not followed and menus stay open while you pick.
+• Your draft is kept on your device and survives a reload, so one message can collect elements from several pages and tabs.
+• Nothing is sent anywhere. What you pick goes to your clipboard and to the draft on your device, and nowhere else.
+• What you typed into a form field is never copied. A field is described by its label or placeholder.
+• It works on sites with strict security policies and on plain-http development servers.
+
+GOOD TO KNOW
+
+• Elements inside an embedded frame cannot be picked one by one; the frame itself can.
+• Things that only exist while hovered, such as tooltips, disappear when pointing starts. Things opened by a click stay.
+• Browser pages such as chrome:// and the Chrome Web Store do not allow extensions to run.

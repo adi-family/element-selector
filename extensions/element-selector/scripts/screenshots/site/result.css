@@ -1,0 +1,9 @@
+/* Shows the text Copy produced, for the third store screenshot. The text itself is put in by
+   the screenshot script, straight from the run that copied it. */
+* { box-sizing: border-box; }
+body { margin: 0; min-height: 100vh; display: grid; place-items: center; font: 16px/1.55 ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif; color: #fafafa; background: #0a0a0a; }
+main { width: 1040px; padding: 8px 0; }
+.eyebrow { margin: 0 0 10px; font-size: 13px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: #60a5fa; }
+h1 { margin: 0 0 10px; font-size: 40px; line-height: 1.12; letter-spacing: -0.02em; }
+.lead { margin: 0 0 26px; font-size: 19px; color: #a3a3a3; }
+pre { margin: 0; padding: 24px 28px; border: 1px solid rgb(255 255 255 / 0.12); border-radius: 14px; background: #171717; color: #e5e5e5; font: 14.5px/1.65 ui-monospace, "SF Mono", Menlo, monospace; white-space: pre-wrap; overflow-wrap: anywhere; }

@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Field Notes · Blog</title>
+    <link rel="stylesheet" href="/page.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="/">Field Notes</a>
+      <span data-slot="badge">Beta</span>
+      <nav><a href="/about">About</a> <a href="/archive">Archive</a> <button data-slot="button" type="button">Sign in</button></nav>
+    </header>
+    <main>
+      <div class="container">
+        <section class="posts">
+          <article class="post-card flex gap-4">
+            <h2>Measuring twice</h2>
+            <p>Why the second measurement is the one that counts.</p>
+            <a class="more" href="/posts/measuring-twice">Read more</a>
+          </article>
+          <article class="post-card featured flex gap-4" data-post-id="42">
+            <h2>How we built the new editor</h2>
+            <p>A long look at the parts nobody sees.</p>
+            <a class="more" href="/posts/new-editor">Read more</a>
+          </article>
+          <article class="post-card flex gap-4">
+            <h2>Small tools</h2>
+            <p>On keeping a toolbox light.</p>
+            <a class="more" href="/posts/small-tools">Read more</a>
+          </article>
+        </section>
+        <aside id="sidebar" data-slot="sidebar">
+          <div class="pane" id="pane">
+            <ul>
+              <li>One</li><li>Two</li><li>Three</li><li>Four</li><li>Five</li><li>Six</li><li>Seven</li>
+              <li>Eight</li><li>Nine</li><li>Ten</li><li>Eleven</li><li>Twelve</li><li>Thirteen</li>
+            </ul>
+          </div>
+          <form>
+            <input id="email" type="email" name="email" placeholder="you@example.com" value="typed-secret@example.com" />
+            <button class="css-1x9k2ab mt-4 px-3" type="button">Subscribe</button>
+          </form>
+          <fancy-widget></fancy-widget>
+        </aside>
+      </div>
+    </main>
+    <script src="/page.js"></script>
+  </body>
+</html>

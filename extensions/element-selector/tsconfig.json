@@ -1,0 +1,27 @@
+{
+  "compilerOptions": {
+    "target": "ES2022",
+    "useDefineForClassFields": true,
+    "lib": ["ES2022", "DOM", "DOM.Iterable"],
+    "module": "ESNext",
+    "skipLibCheck": true,
+    "moduleResolution": "bundler",
+    "allowImportingTsExtensions": true,
+    "verbatimModuleSyntax": true,
+    "moduleDetection": "force",
+    "noEmit": true,
+    "jsx": "react-jsx",
+    "strict": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noFallthroughCasesInSwitch": true,
+    "noUncheckedSideEffectImports": true,
+    // Explicit, as in the frontend: typescript 7 does not auto-include every @types package.
+    "types": ["chrome", "bun"],
+    "paths": {
+      // The component library next door, imported from source exactly as the showcase does.
+      "@design-system/ui": ["../../packages/ui/src/components.ts"]
+    }
+  },
+  "include": ["src", "tests"]
+}

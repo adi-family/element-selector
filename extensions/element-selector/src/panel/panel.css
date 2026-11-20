@@ -1,0 +1,64 @@
+/* The library's stylesheet: Tailwind, the theme tokens, and the utilities its components use.
+   Imported rather than mirrored, so the panel can never drift from the design system's tokens. */
+@import "../../../../packages/ui/src/styles.css";
+
+/* This extension's own markup. */
+@source "./";
+
+@layer base {
+  html,
+  body,
+  #root {
+    height: 100%;
+  }
+  body {
+    /* The frame is exactly as tall as the content; the editor scrolls, the document never does. */
+    overflow: hidden;
+    @apply bg-background text-foreground antialiased;
+  }
+}
+
+[data-slot="selector-editor"] {
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+
+/* Floated and zero-height, so the caret of the empty editor sits where the placeholder starts. */
+[data-slot="selector-editor"][data-empty="true"]::before {
+  content: attr(data-placeholder);
+  float: left;
+  height: 0;
+  pointer-events: none;
+  @apply text-muted-foreground;
+}
+
+/* An element reference inside the message. Created by composer.ts, not by React. */
+[data-slot="element-chip"] {
+  display: inline-block;
+  max-width: 15rem;
+  margin-inline: 1px;
+  padding: 0 0.375rem 0 0.125rem;
+  overflow: hidden;
+  vertical-align: bottom;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  cursor: pointer;
+  user-select: none;
+  @apply rounded-md border bg-secondary font-mono text-xs leading-5.5 text-secondary-foreground transition-colors;
+}
+
+[data-slot="element-chip"]:hover {
+  @apply border-ring bg-accent;
+}
+
+/* The reference's number, the same one the copied message uses for it. */
+[data-slot="element-chip"]::before {
+  content: attr(data-n);
+  display: inline-block;
+  min-width: 1rem;
+  margin-right: 0.3125rem;
+  padding-inline: 0.1875rem;
+  text-align: center;
+  vertical-align: 0.0625rem;
+  @apply rounded-sm bg-primary font-sans text-[0.625rem] leading-4 font-semibold text-primary-foreground;
+}

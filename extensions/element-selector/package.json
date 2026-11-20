@@ -1,0 +1,36 @@
+{
+  "name": "@design-system/element-selector",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "description": "ADI Element Selector — a Chrome extension for pointing at elements on any page and composing a message an agent can act on.",
+  "scripts": {
+    "dev": "bun run build:app --watch & bun run build:content --watch",
+    "build": "bun run build:app && bun run build:content",
+    "build:app": "vite build",
+    "build:content": "vite build --config vite.content.config.ts",
+    "typecheck": "tsc -p tsconfig.json",
+    "test": "bun test tests",
+    "test:browser": "node tests/extension.browser.mjs",
+    "package": "sh scripts/package.sh",
+    "screenshots": "node scripts/screenshots/make.mjs",
+    "store-assets": "node scripts/store/make.mjs",
+    "icons": "sh scripts/icons.sh"
+  },
+  "dependencies": {
+    "lucide-react": "1.63.0",
+    "react": "19.3.1",
+    "react-dom": "19.3.1"
+  },
+  "devDependencies": {
+    "@tailwindcss/vite": "4.3.3",
+    "@types/bun": "1.3.5",
+    "@types/chrome": "0.3.7",
+    "@types/react": "19.3.0",
+    "@types/react-dom": "19.3.0",
+    "@vitejs/plugin-react": "6.1.2",
+    "tailwindcss": "4.3.3",
+    "typescript": "7.0.2",
+    "vite": "8.3.5"
+  }
+}

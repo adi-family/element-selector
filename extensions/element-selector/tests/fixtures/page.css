@@ -1,0 +1,18 @@
+/* Deliberately hostile in the ways real sites are: a 62.5% root font size and rules that reach
+   for every element, including one the extension adds. */
+html { font-size: 62.5%; }
+body { margin: 0; font: 1.6rem/1.5 Georgia, serif; color: #222; background: #fbfaf7; }
+* { box-sizing: border-box; }
+adi-element-selector { display: none; position: static; }
+iframe { border: 4px solid red; }
+.site-header { display: flex; justify-content: space-between; padding: 16px 32px; border-bottom: 1px solid #ddd; }
+.container { display: grid; grid-template-columns: 1fr 260px; gap: 32px; max-width: 960px; margin: 32px auto; padding: 0 32px; }
+.post-card { margin-bottom: 24px; padding: 20px; border: 1px solid #ddd; border-radius: 8px; background: #fff; }
+.post-card h2 { margin: 0 0 8px; font-size: 2.2rem; }
+/* Shown in capitals; the message must still quote the text as the markup has it. */
+.post-card .more { text-transform: uppercase; }
+.post-card p { margin: 0 0 12px; }
+.pane { height: 120px; overflow: auto; border: 1px solid #ddd; background: #fff; }
+.pane li { height: 30px; }
+form { margin: 16px 0; }
+input { width: 100%; padding: 8px; }
